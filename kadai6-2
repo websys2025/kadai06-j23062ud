@@ -1,0 +1,20 @@
+import pandas as pd
+import requests
+import io
+
+# URL（千葉市の図書館一覧）
+CSV_URL = "https://www.city.chiba.jp/kyoiku/shogaigakushu/chuotoshokan/kanri/documents/chibasi-tosyokanichiran.csv"
+
+# requestsでダウンロードして、DataFrameに読み込む
+response = requests.get(CSV_URL)
+response.encoding = 'shift_jis' 
+
+# CSVの内容をDataFrameへ
+df = pd.read_csv(io.StringIO(response.text))
+
+# 表示
+print(df)
+
+
+#参照したオープンデータ：千葉市オープンカタログサイト(図書館・公民館図書室一覧)
+#エンドポイント:https://www.city.chiba.jp/kyoiku/shogaigakushu/chuotoshokan/kanri/documents/chibasi-tosyokanichiran.csv
