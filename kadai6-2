@@ -2,7 +2,7 @@ import pandas as pd
 import requests
 import io
 
-# CSVファイルのURL（千葉市の図書館一覧）
+# URL（千葉市の図書館一覧）
 CSV_URL = "https://www.city.chiba.jp/kyoiku/shogaigakushu/chuotoshokan/kanri/documents/chibasi-tosyokanichiran.csv"
 
 # requestsでダウンロードして、DataFrameに読み込む
