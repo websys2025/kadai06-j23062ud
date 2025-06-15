@@ -65,3 +65,7 @@ for col in df.columns:
 
 df.columns = new_columns
 print(df)
+
+#データの種類:都道府県別国籍(出身地)別外国人登録者
+#エンドポイント:https://api.e-stat.go.jp/rest/3.0/app/json/getStatsData
+#使い方:指定したパラメータでAPIを呼び出し、JSON形式でデータを取得
